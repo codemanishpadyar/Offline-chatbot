@@ -25,6 +25,6 @@ if __name__ == "__main__":
             print("Chatbot: Goodbye ")
             break
 
-        print("⏳ Thinking...")
+        print(" Thinking...")
         reply = chat_with_ai(user_input)
         print("Chatbot:", reply)
