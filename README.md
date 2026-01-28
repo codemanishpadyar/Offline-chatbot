@@ -1,74 +1,67 @@
-# Offline AI Chatbot (Python + Ollama)
+# Offline Voice-Enabled AI Chatbot (Ollama + Phi-3)
 
-## About the Project
-
-This project is an **offline AI chatbot** created using **Python** and **Ollama**.  
-The main goal of this project is to build a chatbot that works **without using any online API or paid service**.
-
-The chatbot runs completely on the local system and uses **local large language models (LLMs)** such as **Phi-3** or **Llama 3** through Ollama.
-
-This project was built for learning purposes and can also be used as a **final year engineering project**.
+This project is a simple **offline AI chatbot** built using **Python** and **Ollama (phi-3 model)**.  
+It supports both **text input** and **voice commands**, and can also **speak back** the responses using text-to-speech.
 
 ---
 
 ## Features
 
-- Works completely offline
-- No API key required
-- No internet needed after model download
-- Uses local AI models
-- Simple command-line chatbot
-- Easy to understand and modify
+- Fully **offline AI chatbot** using Ollama
+- Supports **text mode** and **voice mode**
+- **Speech-to-Text** for voice commands
+- **Text-to-Speech** for spoken responses
 
 ---
 
-## Technologies Used
+##  Technologies Used
 
-- Python
-- Ollama
-- Local LLMs (Phi-3, Llama 3)
-- Requests library
+- Python  
+- Ollama (phi-3 model)  
+- `requests` – API communication  
+- `speechrecognition` – voice input  
+- `pyttsx3` – text to speech  
+- `pyaudio` – microphone access  
 
 ---
+## Project Structure
 
-## Project Files
-
-Offline-AI-Chatbot
-
-├── chatbot_local.py
-
+```bash
+Offline-chatbot/
+│
+├── main.py 
+├── ai_client.py  
+├── voice_input.py 
+├── voice_output.py  
 └── README.md
+```
 
 ---
 
-## Step to steup and run
-# 1. Download ollama 
+##  Setup Instructions
+
+### _1._ Install Ollama
+#### Download and install Ollama from:
+
 https://ollama.com
 
-Check installation: 
-
-bash
-
-ollama --version
-
----
-
-# 2. Download model 
-
-- Recommended model for low RAM(8GB RAM)systems:
-
+Pull the Phi-3 model:
+```bash
 ollama pull phi3
+```
 
-- You can also try:
+## Start ollama
+```bash
+ollama run phi3
+```
 
-ollama pull llama3
+### _2._ Install Python Dependencies
+
+```bash
+pip install pipwin
+pipwin install pyaudio
+```
 
 ---
 
-# 3. Install Python Dependency
-pip install requests
-
----
-
-# 4. Run the Chatbot
-python chatbot.py
+*“From silence to speech — the beginning of my AI voice chatbot journey.”*
